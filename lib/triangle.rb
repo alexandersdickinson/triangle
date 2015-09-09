@@ -12,10 +12,10 @@ class Triangle
   end
   
   def scalene?
-    if self.isosceles?() == false
-      true
-    else
+    if self.isosceles?() == true || self.triangle?() == false
       false
+    else
+      true
     end
   end
   

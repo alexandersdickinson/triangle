@@ -24,6 +24,11 @@ describe(Triangle) do
       test_triangle = Triangle.new(2, 2, 2)
       expect(test_triangle.scalene?()).to(eq(false))
     end
+    
+    it('returns false if it is not a triangle') do
+      test_triangle = Triangle.new(8, 2, 1)
+      expect(test_triangle.scalene?()).to(eq(false))
+    end
   end
   
   describe('#equilateral?') do
