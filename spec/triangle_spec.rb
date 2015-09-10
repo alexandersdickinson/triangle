@@ -45,7 +45,7 @@ describe(Triangle) do
   
   describe('#triangle?') do
     it('returns true if it is a triangle') do
-      test_triangle = Triangle.new(2, 3, 4)
+      test_triangle = Triangle.new(5, 3, 4)
       expect(test_triangle.triangle?()).to(eq(true))
     end
     

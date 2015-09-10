@@ -12,7 +12,7 @@ class Triangle
   end
   
   def scalene?
-    if self.isosceles?() == true || self.triangle?() == false
+    if @sides.uniq().length() < 3 || self.triangle?() == false
       false
     else
       true
@@ -28,7 +28,7 @@ class Triangle
   end
   
   def triangle?
-    if @sides[0] > @sides[1] + @sides[2] || @sides[1] > @sides[0] + @sides[2] || @sides[2] > @sides[0] + @sides[1]
+    if @sides[0] >= @sides[1] + @sides[2] || @sides[1] >= @sides[0] + @sides[2] || @sides[2] >= @sides[0] + @sides[1]
       false
     else
       true
