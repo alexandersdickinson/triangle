@@ -12,10 +12,10 @@ class Triangle
   end
   
   def scalene?
-    if @sides.uniq().length() < 3 || self.triangle?() == false
-      false
-    else
+    if @sides.uniq().length() == 3 && self.triangle?()
       true
+    else
+      false
     end
   end
   
@@ -33,5 +33,9 @@ class Triangle
     else
       true
     end
+  end
+  
+  def sides
+    @sides
   end
 end

@@ -10,6 +10,6 @@ end
 
 get('/output') do
   @header = 'Your Triangle is:'
-  @triangle = Triangle.new(params.fetch('side1'), params.fetch('side2'), params.fetch('side3'))
+  @triangle = Triangle.new(params.fetch('side1').to_i(), params.fetch('side2').to_i(), params.fetch('side3').to_i())
   erb(:output)
 end
